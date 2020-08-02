@@ -54,6 +54,7 @@ SBATCH_NAME=$(basename $SBATCH)
 command="sbatch
     --job-name=$NAME
     --partition=$PARTITION
+    -c $CORES
     --output=$RESOURCE_HOME/forward-util/$SBATCH_NAME.out
     --error=$RESOURCE_HOME/forward-util/$SBATCH_NAME.err
     --mem=$MEM
